@@ -9,17 +9,17 @@ export default function Homepage({navigation}){
         headerShown: true,
         headerTitle: 'Home',
         headerStyle: {
-            backgroundColor: '#FF8DC3',
             fontSize: 20,
             fontWeight: 'bold',
-            padding:10,
-            
+            padding:10,  
         },
+        headerTransparent: true,
+        
         headerLeft: () => (
             <Ionicons name="menu" size={50} color="black" onPress={() => setModal(true)} />
         ),
         headerRight: () => (
-            <Ionicons name="log-out" size={50} color="black" onPress={handleLogout} />
+            <Ionicons name="log-out-outline" size={50} color="black" onPress={handleLogout} />
         ),
         
     });
@@ -45,8 +45,8 @@ export default function Homepage({navigation}){
                 </View>
             </Modal>
             <View style={styles.OptionsContainer}>
-                <Text style={styles.title}>Building Confidence in the Gym </Text>
-                <TouchableOpacity style={AppStyles.button} onPress={() => navigation.navigate('History')}><Text style={styles.Options}>Previous Workouts</Text></TouchableOpacity>
+                <Text style={styles.title}>Welcome to Your Gym Machine Guide  </Text>
+                <TouchableOpacity style={AppStyles.button} onPress={() => navigation.navigate('History')}><Text style={styles.Options}>Previous Searches</Text></TouchableOpacity>
                 <TouchableOpacity style={AppStyles.button} onPress={() => navigation.navigate('NameSearch')}><Text style={styles.Options}>Name Search</Text></TouchableOpacity>
                 <TouchableOpacity style={AppStyles.button} onPress={() => navigation.navigate('PictureSearch')}><Text style={styles.Options}>Picture Search</Text></TouchableOpacity>
             </View>
@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
         fontSize: 20, 
         fontWeight: 'bold',
         color: 'white',
+        fontFamily: 'Lobster-Regular',
     },
     menuBar: {
         alignSelf: 'flex-start',
@@ -101,5 +102,13 @@ const styles = StyleSheet.create({
         marginBottom: 15,
         textAlign: 'center',
         fontSize: 20,
+    },
+    title: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: 'black',
+        padding: 10,
+        fontFamily: 'Lobster-Regular',
+        alignSelf: 'center',
     },
 });

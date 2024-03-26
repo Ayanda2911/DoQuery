@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { NavigationContainer } from '@react-navigation/native';
  
 import Login from '../components/login';
 import Signup from '../components/SignUp';
@@ -12,8 +11,7 @@ import LogoTitle from '../components/LogoTitle';
  export default function AuthStack() {
     const Stack = createNativeStackNavigator();
     return (
-        <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{contentStyle: {backgroundColor: '#FF8DC3'}}}>
             <Stack.Screen 
             name="Login"
             component={Login}
@@ -31,9 +29,7 @@ import LogoTitle from '../components/LogoTitle';
               headerBackground: () => <LogoTitle />,
               headerTransparent: true,
             }}
-        
             />
             
         </Stack.Navigator>
-        </NavigationContainer>
     );} 

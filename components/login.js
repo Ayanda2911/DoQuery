@@ -54,7 +54,7 @@ export default function Login({ navigation }) {
             style={styles.button}
             onPress={() => { navigation.navigate('SignUp') }}
           >
-            <Text style={{color: "white", fontWeight: "bold", fontSize:18}}> Sign up</Text>
+            <Text style={{color: "white", fontWeight: "bold", fontSize:16}}> Don't have an account ? Sign up</Text>
           </TouchableOpacity>
         </View>
 
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   },
   button: AppStyles.button,
   SignUpContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
   }
 });
