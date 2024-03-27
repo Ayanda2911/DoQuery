@@ -6,14 +6,7 @@ import * as ImagePicker from 'expo-image-picker';
 
 
 export default function PictureSearch({navigation}){
-    navigation.setOptions({
-        headerShown: true,
-        headerTransparent: true,
-        headerTitle:'', 
-        headerLeft: () => ( 
-            <Ionicons name='chevron-back-outline' size={40} color='white' onPress={() => navigation.goBack()} style={{paddingBottom: 5}} />
-        )
-    });
+    
 
 
     const [camera, setCamera] = useState(null);
@@ -22,6 +15,14 @@ export default function PictureSearch({navigation}){
     const [hasCameraPermission, setHasCameraPermission] = useState(null);
 
     useEffect(() => {
+        navigation.setOptions({
+            headerShown: true,
+            headerTransparent: true,
+            headerTitle:'', 
+            headerLeft: () => ( 
+                <Ionicons name='chevron-back-outline' size={40} color='white' onPress={() => navigation.goBack()} style={{paddingBottom: 5}} />
+            )
+        });
         (async () => {
           const cameraStatus = await Camera.requestCameraPermissionsAsync();
           setHasCameraPermission(cameraStatus.status === 'granted');

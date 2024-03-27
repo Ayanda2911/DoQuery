@@ -1,29 +1,32 @@
-import react from "react";
+import react, { useEffect } from "react";
 import { View, Text, StyleSheet, Modal, TouchableOpacity} from "react-native";
 import {Ionicons} from '@expo/vector-icons';
 import { logout } from "../services/auth";
 import { useState } from "react";
 
 export default function Homepage({navigation}){
-    navigation.setOptions({
-        headerShown: true,
-        headerTitle: 'Home',
-        headerStyle: {
-            fontSize: 20,
-            fontWeight: 'bold',
-            padding:10,  
-        },
-        headerTransparent: true,
-        
-        headerLeft: () => (
-            <Ionicons name="menu" size={50} color="black" onPress={() => setModal(true)} />
-        ),
-        headerRight: () => (
-            <Ionicons name="log-out-outline" size={50} color="black" onPress={handleLogout} />
-        ),
-        
-    });
     const [modal, setModal] = useState(false);
+    useEffect(() => {
+        navigation.setOptions({
+            headerShown: true,
+            headerTitle: 'Home',
+            headerStyle: {
+                fontSize: 20,
+                fontWeight: 'bold',
+                padding:10,  
+            },
+            headerTransparent: true,
+            
+            headerLeft: () => (
+                <Ionicons name="menu" size={50} color="black" onPress={() => setModal(true)} />
+            ),
+            headerRight: () => (
+                <Ionicons name="log-out-outline" size={50} color="black" onPress={handleLogout} />
+            ),
+            
+        });
+    }, []);
+    
     const handleLogout = () => {
         logout();
         navigation.navigate('Login');

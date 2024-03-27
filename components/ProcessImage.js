@@ -1,9 +1,10 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 
 
 export default function ProcessImage({ navigation, route }) {
+    useEffect(() => {
     navigation.setOptions({
         headerShown: true,
         headerTitle: 'Preview Image',
@@ -13,7 +14,7 @@ export default function ProcessImage({ navigation, route }) {
             padding: 10,
         },
         headerTransparent: true,
-    });
+    })}, []);
     const [results, setResults] = useState(null);
     const { imageURI } = route.params;
 
