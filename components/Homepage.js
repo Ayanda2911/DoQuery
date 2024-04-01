@@ -10,10 +10,10 @@ export default function Homepage({navigation}){
         navigation.setOptions({
             headerShown: true,
             headerTitle: 'Home',
-            headerStyle: {
-                fontSize: 20,
-                fontWeight: 'bold',
-                padding:10,  
+            headerTitleStyle: {
+                fontFamily: "Montserrat-Regular",
+                fontWeight: "bold", 
+                fontSize: 30, 
             },
             headerTransparent: true,
             
@@ -48,7 +48,6 @@ export default function Homepage({navigation}){
                 </View>
             </Modal>
             <View style={styles.OptionsContainer}>
-                <Text style={styles.title}>Welcome to Your Gym Machine Guide  </Text>
                 <TouchableOpacity style={AppStyles.button} onPress={() => navigation.navigate('History')}><Text style={styles.Options}>Previous Searches</Text></TouchableOpacity>
                 <TouchableOpacity style={AppStyles.button} onPress={() => navigation.navigate('NameSearch')}><Text style={styles.Options}>Name Search</Text></TouchableOpacity>
                 <TouchableOpacity style={AppStyles.button} onPress={() => navigation.navigate('PictureSearch')}><Text style={styles.Options}>Picture Search</Text></TouchableOpacity>
@@ -60,7 +59,6 @@ export default function Homepage({navigation}){
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FF8DC3',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -70,9 +68,8 @@ const styles = StyleSheet.create({
     },
     Options: {
         fontSize: 20, 
-        fontWeight: 'bold',
         color: 'white',
-        fontFamily: 'Lobster-Regular',
+        fontFamily: 'Montserrat-Regular',
     },
     menuBar: {
         alignSelf: 'flex-start',
@@ -107,11 +104,10 @@ const styles = StyleSheet.create({
         fontSize: 20,
     },
     title: {
-        fontSize: 18,
-        fontWeight: 'bold',
+        fontSize: 12,
         color: 'black',
         padding: 10,
-        fontFamily: 'Lobster-Regular',
+        fontFamily: 'PollerOne-Regular',
         alignSelf: 'center',
     },
 });

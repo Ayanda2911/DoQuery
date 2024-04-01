@@ -12,7 +12,7 @@ const Stack = createNativeStackNavigator();
 export default function UserStack() {
     return (
         
-            <Stack.Navigator screenOptions={{contentStyle: {backgroundColor: '#FF8DC3'}}}>
+            <Stack.Navigator screenOptions={{contentStyle: {backgroundColor: '#BCFD49'}}}>
                 <Stack.Screen name="Homepage" component={Homepage} options={{ headerShown : false }}/>
                 <Stack.Screen name="PictureSearch" component={PictureSearch} options={{ headerShown : false }}/>
                 <Stack.Screen name="ProcessImage" component={ProcessImage} options={{ headerShown : false }}/>

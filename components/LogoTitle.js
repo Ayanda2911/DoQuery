@@ -1,21 +1,19 @@
-import react from "react";
-import { View,  StyleSheet} from "react-native";
-import Ionicons from '@expo/vector-icons/Ionicons';
+import React from "react";
+import { View,  StyleSheet, Image} from "react-native";
 
 
 export default function LogoTitle({navigation}){
     return (
 
         <View style={styles.container}>
-            <Ionicons name='barbell-outline' size={80} color='black'/>
+            <Image source={require('../assets/icon.png')} style={{ width: 50, height: 50, marginTop: 50 }} />
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         alignItems: 'center',
-        marginTop: 20,
+        justifyContent: 'center',
     },
 });

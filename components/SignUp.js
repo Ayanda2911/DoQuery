@@ -46,7 +46,7 @@ export default function Signup({navigation}){
     return (
         <KeyboardAvoidingView style={styles.container} behavior="padding">
             <View style={{ padding : 10, alignItems:'center', marginVertical: 20}}>
-                <Text style={{fontFamily : 'Lobster-Regular', fontSize : 25}}>Welcome to ShyStrength </Text>
+                <Text style={{fontFamily : 'PollerOne-Regular', fontSize : 20}}>Welcome to  DoQuery </Text>
             </View>
             <View style={styles.formContainer}>
 
@@ -95,7 +95,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#FF8DC3",
     },
     formContainer: {
         width: "80%",

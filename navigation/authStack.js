@@ -11,7 +11,7 @@ import LogoTitle from '../components/LogoTitle';
  export default function AuthStack() {
     const Stack = createNativeStackNavigator();
     return (
-        <Stack.Navigator screenOptions={{contentStyle: {backgroundColor: '#FF8DC3'}}}>
+        <Stack.Navigator screenOptions={{contentStyle: {backgroundColor: '#BCFD49'}}}>
             <Stack.Screen 
             name="Login"
             component={Login}

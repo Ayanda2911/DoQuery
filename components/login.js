@@ -27,16 +27,16 @@ export default function Login({ navigation }) {
     <View style={styles.container}>
       <KeyboardAvoidingView style={{ width: '80%' }}>
         <View style={{ padding: 10, alignItems: 'center', marginVertical: 20 }}>
-          <Text style={{ fontFamily: 'Lobster-Regular', fontSize: 25 }}>Welcome to ShyStrength </Text>
+          <Text style={{ fontFamily: 'Montserrat-Regular', fontSize: 20}}>Welcome to DoQuery </Text>
         </View>
 
-        <Text> Enter Email</Text>
+        <Text style={{fontFamily: 'Montserrat-Regular'}}> Enter Email</Text>
         <TextInput
           style={styles.input}
           placeholder="Email"
           onChangeText={setEmail}
         ></TextInput>
-        <Text> Enter Password</Text>
+        <Text style={{fontFamily: 'Montserrat-Regular'}}> Enter Password</Text>
         <TextInput
           style={styles.input}
           placeholder="Password"

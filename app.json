@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "ShyStrength",
-    "slug": "ShyStrength",
+    "name": "DoQuery",
+    "slug": "DoQuery",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "cover",
-      "backgroundColor": "#FF8DC3"
+      "resizeMode": "contain",
+      "backgroundColor": "#BCFD49"
     },
     "assetBundlePatterns": [
       "**/*"
